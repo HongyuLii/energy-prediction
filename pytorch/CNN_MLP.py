@@ -5,7 +5,7 @@ class CNN2D_MLP_Model(nn.Module):
     def __init__(self, cnn_channels=64, hidden_layers=[512, 512, 512]):
         super(CNN2D_MLP_Model, self).__init__()
 
-        self.conv1 = nn.Conv2d(1, cnn_channels, kernel_size=(5, 3), padding=(0, 1))
+        self.conv1 = nn.Conv2d(1, cnn_channels, kernel_size=(2, 3), padding=(0, 1))
         self.relu = nn.ReLU()
         self.conv2 = nn.Conv2d(cnn_channels, cnn_channels, kernel_size=(1, 3), padding=(0, 1))
 
