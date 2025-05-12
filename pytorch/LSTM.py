@@ -17,4 +17,5 @@ class LSTMModel(nn.Module):
         # x: (batch_size, seq_len, input_size)
         out, _ = self.lstm(x)  # out: (batch_size, seq_len, hidden_size)
         last_hidden = out[:, -1, :]  # take last time step
-        return self.fc(last_hidden)
+        output = self.fc(last_hidden)
+        return output
